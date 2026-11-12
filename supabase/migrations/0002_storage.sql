@@ -1,0 +1,2 @@
+-- Storage -- PLACEHOLDER
+-- Private buckets (firmware, attachments) with org-scoped policies.

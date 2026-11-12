@@ -1,0 +1,2 @@
+-- Schema -- PLACEHOLDER
+-- organizations, memberships(role), buildings, rooms, devices, device_state, readings, automations, automation_runs, alerts, events, firmware_releases, firmware_rollouts, integrations. RLS on every table.

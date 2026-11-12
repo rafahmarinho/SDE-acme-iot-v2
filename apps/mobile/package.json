@@ -1,0 +1,1 @@
+{ "name": "@acme-iot/mobile", "version": "0.0.0", "private": true, "main": "expo-router/entry", "scripts": { "start": "expo start", "typecheck": "tsc --noEmit" } }
