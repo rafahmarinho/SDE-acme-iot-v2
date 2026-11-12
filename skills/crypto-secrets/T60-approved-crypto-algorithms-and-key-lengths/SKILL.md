@@ -48,8 +48,9 @@ export function verifyHmac(body: string, sig: string, secret: string) {
 - Document the policy in `packages/shared/src/cryptoPolicy.ts` and reference it everywhere.
 
 **Success Criteria:**
-- [ ] No weak algorithms referenced anywhere (grep for md5, sha1, des, ecb).
+- [x] No weak algorithms referenced anywhere (grep for md5, sha1, des, ecb).
 - [ ] Firmware releases store SHA-256 digest and Ed25519/ECDSA signature.
-- [ ] Secrets are validated for minimum length at startup.
+- [x] Secrets are validated for minimum length at startup.
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** packages/shared/src/cryptoPolicy.ts (policy + forbidden list), apps/api/src/lib/crypto.ts (SHA-256/HMAC-SHA256, secret length check), apps/api/src/lib/env.ts (≥32-byte secrets, Ed25519 PEM keys), apps/api/eslint.config.js (weak-algorithm literal rule). Firmware columns: Layer A/C.

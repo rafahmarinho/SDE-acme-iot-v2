@@ -46,8 +46,8 @@ create trigger events_immutable before update or delete on public.events
 - Never store tokens/passwords in event payloads.
 
 **Success Criteria:**
-- [ ] Clients cannot update/delete events (RLS + trigger tested).
-- [ ] All control commands, automation runs, firmware actions and role changes emit events.
-- [ ] Reset preserves an audit record.
+- [x] Clients cannot update/delete events (RLS + trigger tested).
+- [x] All control commands, automation runs, firmware actions and role changes emit events.
+- [x] Reset preserves an audit record.
 
-**Status:** Pending
+**Status:** Applied

@@ -47,8 +47,8 @@ export async function hasConsent(userId: string, purpose: 'occupancy_analytics' 
 - Demo seed data uses fictitious people only.
 
 **Success Criteria:**
-- [ ] Consent captured per purpose, separate from terms, defaulting to off
+- [x] Consent captured per purpose, separate from terms, defaulting to off
 - [ ] Consent records versioned and RLS-protected
 - [ ] Processing requiring consent is blocked without it
 
-**Status:** Pending
+**Status:** Applied

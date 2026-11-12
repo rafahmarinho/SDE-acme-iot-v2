@@ -41,7 +41,7 @@ Deploying the static Expo web export to Vercel with default headers, so an attac
 - Do not rely on JS frame-busting.
 
 **Success Criteria:**
-- [ ] `frame-ancestors 'none'` and `X-Frame-Options: DENY` present on all responses
+- [x] `frame-ancestors 'none'` and `X-Frame-Options: DENY` present on all responses
 - [ ] App fails to render inside a third-party iframe
 
-**Status:** Pending
+**Status:** Applied

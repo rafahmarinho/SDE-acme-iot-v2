@@ -45,8 +45,9 @@ export function verifyFirmware(buf: Buffer, sigB64: string): boolean {
 - Add a lint rule / code-review check forbidding imports of unknown crypto packages.
 
 **Success Criteria:**
-- [ ] All cryptographic operations go through `node:crypto`, WebCrypto or `expo-crypto`.
-- [ ] No password hashing code exists in the repo (delegated to Supabase Auth).
-- [ ] No custom encryption/obfuscation functions present.
+- [x] All cryptographic operations go through `node:crypto`, WebCrypto or `expo-crypto`.
+- [x] No password hashing code exists in the repo (delegated to Supabase Auth).
+- [x] No custom encryption/obfuscation functions present.
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** apps/api/src/lib/crypto.ts (node:crypto only), packages/shared/src/cryptoPolicy.ts, apps/api/eslint.config.js (crypto-js/md5/sha1 imports banned).

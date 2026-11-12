@@ -45,8 +45,9 @@ await rateLimit(`sim-reset:${orgId}`, 3, 3600);
 - Supabase Auth has its own rate limits — keep them enabled in project settings.
 
 **Success Criteria:**
-- [ ] Command, claim, automation and simulation endpoints are throttled.
-- [ ] Exceeding limits returns 429 with Retry-After.
+- [x] Command, claim, automation and simulation endpoints are throttled.
+- [x] Exceeding limits returns 429 with Retry-After.
 - [ ] Violations are recorded as events.
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** apps/api/src/middleware/rateLimit.ts (`consume` via Postgres `consume_rate_limit`, named `LIMITS`, fail-closed), apps/api/src/lib/http.ts (every route throttled per user/IP, 429 + Retry-After). Violations are logged; per-org event rows: Layer C.

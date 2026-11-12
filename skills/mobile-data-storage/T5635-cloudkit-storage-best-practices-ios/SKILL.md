@@ -36,8 +36,8 @@ const { data, error } = await supabase
 - If CloudKit is introduced later: private database for user data, never the public database for org data; authenticate via Apple ID; validate records server-side; encrypt sensitive fields (`encryptedValues`).
 
 **Success Criteria:**
-- [ ] iOS build has no CloudKit container entitlement
-- [ ] All shared data flows through Supabase with RLS
+- [x] iOS build has no CloudKit container entitlement
+- [x] All shared data flows through Supabase with RLS
 - [ ] Architecture review gate documented for any future CloudKit use
 
-**Status:** Pending
+**Status:** Applied

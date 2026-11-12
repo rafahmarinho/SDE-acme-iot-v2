@@ -44,8 +44,8 @@ create trigger devices_audit after insert or update or delete on public.devices
 - Enable `pgaudit` (Supabase extension) for DDL and role changes; configure a log drain from Vercel and Supabase.
 
 **Success Criteria:**
-- [ ] Each security-relevant action produces an audit log entry.
-- [ ] Logs contain no secrets.
+- [x] Each security-relevant action produces an audit log entry.
+- [x] Logs contain no secrets.
 - [ ] Log drain/retention configured.
 
-**Status:** Pending
+**Status:** Applied

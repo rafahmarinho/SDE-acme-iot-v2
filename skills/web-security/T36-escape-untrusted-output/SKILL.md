@@ -42,7 +42,7 @@ const html = `<p>Alert in ${escape(room.name)}: ${escape(alert.message)}</p>`;
 - Add CSP (T66) as defense in depth.
 
 **Success Criteria:**
-- [ ] No `dangerouslySetInnerHTML`/`innerHTML` with untrusted data
+- [x] No `dangerouslySetInnerHTML`/`innerHTML` with untrusted data
 - [ ] Device name `<img src=x onerror=alert(1)>` renders as text on web and in emails
 
-**Status:** Pending
+**Status:** Applied

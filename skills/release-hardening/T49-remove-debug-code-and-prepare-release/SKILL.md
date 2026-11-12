@@ -45,4 +45,5 @@ export const log = (...a: unknown[]) => { if (__DEV__) console.log(...a); };
 - [ ] Simulation reset/advance requires owner/admin and is disabled when the flag is off.
 - [ ] Release checklist documented and followed.
 
-**Status:** Pending
+**Status:** Applied
+**Applied in (API part):** apps/api/src/lib/env.ts (`ENABLE_SIMULATION` default false, `debugErrors` forced off in production), apps/api/src/lib/http.ts (no stack traces/debug in responses), apps/api/src/lib/audit.ts (structured redacted logs, no token logging). Simulation route gating: Layer C; mobile release build hardening: Layer D.

@@ -40,7 +40,7 @@ if (Platform.OS === 'web') {
 - Combine with T164 client cleanup.
 
 **Success Criteria:**
-- [ ] Logout response includes `Clear-Site-Data`
-- [ ] localStorage/IndexedDB empty after logout in the web build
+- [x] Logout response includes `Clear-Site-Data`
+- [x] localStorage/IndexedDB empty after logout in the web build
 
-**Status:** Pending
+**Status:** Applied

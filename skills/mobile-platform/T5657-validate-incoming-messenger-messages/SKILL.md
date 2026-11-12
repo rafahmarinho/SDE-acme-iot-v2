@@ -42,8 +42,8 @@ const NotifData = z.object({ kind: z.enum(['alert', 'automation']), id: z.string
 - Wrap handlers to avoid crashes from malformed messages.
 
 **Success Criteria:**
-- [ ] All Realtime and push payloads validated by schema before use
-- [ ] Malformed messages are dropped without crashes
-- [ ] No exported component receives arbitrary messages
+- [x] All Realtime and push payloads validated by schema before use
+- [x] Malformed messages are dropped without crashes
+- [x] No exported component receives arbitrary messages
 
-**Status:** Pending
+**Status:** Applied

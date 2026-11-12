@@ -38,8 +38,8 @@ create policy "attachments write operators" on storage.objects for insert
 - Limit upload size and MIME types per bucket (`file_size_limit`, `allowed_mime_types`).
 
 **Success Criteria:**
-- [ ] No public buckets
-- [ ] Storage policies scope objects by org folder and role
-- [ ] Firmware objects inaccessible to client keys
+- [x] No public buckets
+- [x] Storage policies scope objects by org folder and role
+- [x] Firmware objects inaccessible to client keys
 
-**Status:** Pending
+**Status:** Applied

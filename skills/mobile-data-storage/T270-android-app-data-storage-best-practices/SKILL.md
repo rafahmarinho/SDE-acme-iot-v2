@@ -49,8 +49,8 @@ export const supabase = createClient(process.env.EXPO_PUBLIC_SUPABASE_URL!, proc
 - Remove unused permissions from the generated manifest (`android.blockedPermissions`).
 
 **Success Criteria:**
-- [ ] Auth session persisted through expo-secure-store on Android
-- [ ] No external storage permissions in the built AndroidManifest
-- [ ] `allowBackup` disabled or sensitive data excluded from backups
+- [x] Auth session persisted through expo-secure-store on Android
+- [x] No external storage permissions in the built AndroidManifest
+- [x] `allowBackup` disabled or sensitive data excluded from backups
 
-**Status:** Pending
+**Status:** Applied

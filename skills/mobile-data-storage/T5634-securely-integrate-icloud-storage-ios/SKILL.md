@@ -39,8 +39,8 @@ const CACHE_FILE = `${FileSystem.cacheDirectory}acme-readings.json`;
 - If iCloud is ever added (e.g., user preferences), store only non-sensitive key/values, encrypt anything else, and handle sync conflicts/account changes.
 
 **Success Criteria:**
-- [ ] No iCloud entitlements in the iOS build (unless reviewed)
-- [ ] All Keychain items use device-only accessibility
-- [ ] Offline cache stored outside backed-up directories
+- [x] No iCloud entitlements in the iOS build (unless reviewed)
+- [x] All Keychain items use device-only accessibility
+- [x] Offline cache stored outside backed-up directories
 
-**Status:** Pending
+**Status:** Applied

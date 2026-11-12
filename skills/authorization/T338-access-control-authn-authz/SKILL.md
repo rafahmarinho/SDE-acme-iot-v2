@@ -45,8 +45,9 @@ $$;
 - Deny by default; new routes require an explicit permission key.
 
 **Success Criteria:**
-- [ ] Permission matrix covers every API route and table
-- [ ] Devices authenticate before posting readings/state
+- [x] Permission matrix covers every API route and table
+- [x] Devices authenticate before posting readings/state
 - [ ] Cross-organization access denied in tests
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** packages/shared/src/permissions.ts, apps/api/src/middleware/auth.ts, apps/api/src/middleware/systemAuth.ts (HMAC-signed device principals), apps/api/src/lib/http.ts.

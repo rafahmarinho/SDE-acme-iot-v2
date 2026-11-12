@@ -38,7 +38,7 @@ export const PasswordSchema = z.string()
 
 **Success Criteria:**
 - [ ] Supabase Auth rejects passwords < 12 chars and known-leaked passwords
-- [ ] Same policy applied in sign-up, change and reset flows
-- [ ] Password fields support password managers (autoComplete/textContentType)
+- [x] Same policy applied in sign-up, change and reset flows
+- [x] Password fields support password managers (autoComplete/textContentType)
 
-**Status:** Pending
+**Status:** Applied

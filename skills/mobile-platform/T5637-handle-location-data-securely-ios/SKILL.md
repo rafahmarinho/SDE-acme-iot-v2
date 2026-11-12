@@ -39,8 +39,8 @@ create policy occupancy_read on readings for select using (
 - Ensure some dependency doesn't add location permissions (check generated Info.plist/manifest).
 
 **Success Criteria:**
-- [ ] Built app requests no location permission
+- [x] Built app requests no location permission
 - [ ] Raw occupancy history restricted to owner/admin
-- [ ] Info.plist has no location usage keys
+- [x] Info.plist has no location usage keys
 
-**Status:** Pending
+**Status:** Applied

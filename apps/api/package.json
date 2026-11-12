@@ -1,1 +1,25 @@
-{ "name": "@acme-iot/api", "version": "0.0.0", "private": true, "scripts": { "dev": "vercel dev", "typecheck": "tsc --noEmit" } }
+{
+  "name": "@acme-iot/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.11 <23"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@acme-iot/shared": "workspace:*",
+    "@supabase/supabase-js": "2.49.4",
+    "zod": "3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "eslint": "9.17.0",
+    "typescript": "5.6.3",
+    "typescript-eslint": "8.18.1"
+  }
+}

@@ -25,4 +25,10 @@ timeouts, concurrent connections) and notify administrators of violations.
   request limits, and enables Vercel Firewall / attack challenge mode for abuse.
 - Configure log drains/alerts for 413/431/504 spikes so administrators are notified.
 
-**Status:** Documented
+**Re-evaluation (apply-fixes):** an applicable config file exists in the repo, so the in-repo part was applied:
+- `apps/api/vercel.json`: per-function `maxDuration` (10 s; 20 s for firmware) and `memory` limits; baseline security headers.
+- `apps/api/src/lib/http.ts`: URL length ≤ 2048 (414), ≤ 64 headers / 16 KiB of headers (431), per-route body limits (413),
+  method allow-list (405), all violations logged with requestId.
+- Remaining platform-only items (connection limits, edge header limits, firewall/attack mode, log-drain alerts) stay with the platform owner as described above.
+
+**Status:** Applied

@@ -47,4 +47,5 @@ create policy firmware_write on firmware_releases for insert
 - [ ] RLS policies mirror the permission matrix
 - [ ] Viewer token gets 403/RLS denial on admin actions when calling directly
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** packages/shared/src/permissions.ts (matrix, deny-by-default `can`), apps/api/src/middleware/auth.ts (`requireRole`/`requirePermission`, server-side membership lookup), apps/api/src/lib/http.ts (auth required unless `auth: 'none'`). RLS mirror: Layer A; per-route usage: Layer C.

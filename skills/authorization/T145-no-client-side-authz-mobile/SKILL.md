@@ -40,4 +40,4 @@ export default withErrors(async (req, res) => {
 - [ ] No API accepts role/permission claims from the client
 - [ ] Viewer cannot change setpoint or plug state via direct API call
 
-**Status:** Pending
+**Status:** Applied

@@ -42,8 +42,8 @@ await supabase.auth.updateUser({ email: newEmail }); // confirmation sent to new
 - Email changes require confirmation; show "last updated" and allow correction requests.
 
 **Success Criteria:**
-- [ ] Users can view and correct their own personal data
+- [x] Users can view and correct their own personal data
 - [ ] Personal data stored once and referenced elsewhere
-- [ ] Email changes require verification
+- [x] Email changes require verification
 
-**Status:** Pending
+**Status:** Applied

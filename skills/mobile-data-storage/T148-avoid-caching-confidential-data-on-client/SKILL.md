@@ -46,8 +46,8 @@ export async function clearOfflineCache() {
 - Do not write temporary export files to shared/external storage; keep everything in the app sandbox.
 
 **Success Criteria:**
-- [ ] Offline cache stores only allow-listed reading/state fields
+- [x] Offline cache stores only allow-listed reading/state fields
 - [ ] No tokens or PII present in AsyncStorage/localStorage (verified by inspecting storage after login)
-- [ ] Cache cleared on logout and expired after TTL
+- [x] Cache cleared on logout and expired after TTL
 
-**Status:** Pending
+**Status:** Applied

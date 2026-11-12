@@ -45,8 +45,8 @@ export async function apiFetch(path: string, init: RequestInit = {}) {
 - Do not send tokens in URL query strings (logged by proxies).
 
 **Success Criteria:**
-- [ ] Production Android manifest has `usesCleartextTraffic="false"`.
-- [ ] iOS Info.plist has no `NSAllowsArbitraryLoads=true`.
-- [ ] All app network calls use `https://`/`wss://`.
+- [x] Production Android manifest has `usesCleartextTraffic="false"`.
+- [x] iOS Info.plist has no `NSAllowsArbitraryLoads=true`.
+- [x] All app network calls use `https://`/`wss://`.
 
-**Status:** Pending
+**Status:** Applied

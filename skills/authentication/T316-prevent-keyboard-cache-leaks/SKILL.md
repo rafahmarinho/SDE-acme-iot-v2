@@ -44,7 +44,7 @@ export function SecretInput(props: TextInputProps) {
 - Never log input values.
 
 **Success Criteria:**
-- [ ] All sensitive inputs disable autocorrect/spellcheck
+- [x] All sensitive inputs disable autocorrect/spellcheck
 - [ ] No sensitive values appear in keyboard suggestions after use
 
-**Status:** Pending
+**Status:** Applied

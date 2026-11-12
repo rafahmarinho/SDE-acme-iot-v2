@@ -44,8 +44,9 @@ export function claimToken(): string {
 - Store only a hash of claim/invite tokens in the DB; make them single-use and time-limited.
 
 **Success Criteria:**
-- [ ] All codes/tokens come from `node:crypto` or `expo-crypto`.
-- [ ] Lint rule blocks `Math.random` in `apps/api/src` security modules.
+- [x] All codes/tokens come from `node:crypto` or `expo-crypto`.
+- [x] Lint rule blocks `Math.random` in `apps/api/src` security modules.
 - [ ] Registration codes are single-use with expiry.
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** apps/api/src/lib/crypto.ts (`newRegistrationCode` via randomInt, `newToken`/`newSystemCredential` via randomBytes, `newRequestId` via randomUUID), apps/api/eslint.config.js (Math.random banned). Single-use/expiry: Layer A `claim_device`.

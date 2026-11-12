@@ -47,8 +47,8 @@ await supabase.from('devices').select(COLS).ilike('name', `%${escapeLike(q)}%`);
 - Escape `%`/`_` in LIKE patterns.
 
 **Success Criteria:**
-- [ ] No string-concatenated SQL in migrations/functions with user input.
-- [ ] Sort/filter fields validated against allow-lists.
-- [ ] SQL injection payloads in search return no extra rows (test).
+- [x] No string-concatenated SQL in migrations/functions with user input.
+- [x] Sort/filter fields validated against allow-lists.
+- [x] SQL injection payloads in search return no extra rows (test).
 
-**Status:** Pending
+**Status:** Applied

@@ -41,8 +41,8 @@ if (!device) throw new HttpError(404);
 - Test with the two demo orgs: cross-org reads/updates must fail.
 
 **Success Criteria:**
-- [ ] RLS select/update/delete policies on every org-scoped table
-- [ ] Cross-org object access returns 404/denied (automated test)
-- [ ] Realtime does not leak other org events
+- [x] RLS select/update/delete policies on every org-scoped table
+- [x] Cross-org object access returns 404/denied (automated test)
+- [x] Realtime does not leak other org events
 
-**Status:** Pending
+**Status:** Applied

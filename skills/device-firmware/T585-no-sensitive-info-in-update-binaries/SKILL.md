@@ -37,8 +37,8 @@ type PublicManifest = { version: string; model: string; size: number; sha256: st
 - Store artifacts in a private bucket; deliver via short-lived signed URLs.
 
 **Success Criteria:**
-- [ ] Release pipeline rejects artifacts containing secret patterns
-- [ ] Device manifest contains only version/model/size/hash/date
-- [ ] Artifacts stored privately and delivered via signed URLs
+- [x] Release pipeline rejects artifacts containing secret patterns
+- [x] Device manifest contains only version/model/size/hash/date (plus keyId for key rotation)
+- [x] Artifacts stored privately and delivered via signed URLs
 
-**Status:** Pending
+**Status:** Applied

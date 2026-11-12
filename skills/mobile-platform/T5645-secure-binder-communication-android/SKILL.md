@@ -39,8 +39,8 @@ override fun onTransact(code: Int, data: Parcel, reply: Parcel?, flags: Int): Bo
 - If unavoidable: `exported=false`, signature-level permission, caller UID/package check, validate every parcel field, rate-limit calls, no sensitive data across process boundaries.
 
 **Success Criteria:**
-- [ ] No AIDL/Binder interfaces exposed to other apps in the built APK
-- [ ] Any bound service is unexported and signature-protected
+- [x] No AIDL/Binder interfaces exposed to other apps in the built APK
+- [x] Any bound service is unexported and signature-protected
 - [ ] Merged manifest reviewed as part of release checklist
 
-**Status:** Pending
+**Status:** Applied

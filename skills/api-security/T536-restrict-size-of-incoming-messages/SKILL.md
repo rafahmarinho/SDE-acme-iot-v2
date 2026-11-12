@@ -46,8 +46,9 @@ export const LIMITS = { command: 2_048, automation: 16_384, simulation: 8_192 } 
 - Validate response sizes from simulated device services before parsing.
 
 **Success Criteria:**
-- [ ] Every API route uses `readJson` with an explicit limit.
-- [ ] Oversized requests return 413 without being parsed.
+- [x] Every API route uses `readJson` with an explicit limit.
+- [x] Oversized requests return 413 without being parsed.
 - [ ] Storage bucket for firmware has a size limit.
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** apps/api/src/lib/http.ts (`BODY_LIMITS`, streaming size check before parse → 413, default 16 KiB), packages/shared/src/validation.ts (array/string caps). Bucket file_size_limit: Layer A.

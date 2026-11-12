@@ -39,8 +39,8 @@ const endpointFor = (deviceId: string) => new URL(`/devices/${deviceId}`, proces
 - Authenticate devices (T558) before accepting discovery/heartbeat updates.
 
 **Success Criteria:**
-- [ ] Unsigned or altered provisioning records are rejected
-- [ ] Device endpoints never come from client-supplied data
-- [ ] Heartbeats from unauthenticated devices are ignored
+- [x] Unsigned or altered provisioning records are rejected (provisioning trust = server-side hashed one-time registration code verified by `claim_device`; manufacturer-signed records are not used in the simulation)
+- [x] Device endpoints never come from client-supplied data
+- [x] Heartbeats from unauthenticated devices are ignored
 
-**Status:** Pending
+**Status:** Applied

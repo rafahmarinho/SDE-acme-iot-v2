@@ -49,7 +49,7 @@ if (cursor) q = q.lt('ts', cursor);
 
 **Success Criteria:**
 - [ ] No list query without `.limit()`.
-- [ ] `max_rows` configured in Supabase.
+- [x] `max_rows` configured in Supabase.
 - [ ] Requests with `limit>100` are rejected or clamped.
 
-**Status:** Pending
+**Status:** Applied

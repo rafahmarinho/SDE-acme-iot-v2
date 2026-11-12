@@ -44,8 +44,9 @@ updates:
 
 **Success Criteria:**
 - [ ] Lockfile committed; CI uses frozen lockfile.
-- [ ] Automated dependency update PRs enabled.
-- [ ] CI blocks on high/critical advisories.
+- [x] Automated dependency update PRs enabled.
+- [x] CI blocks on high/critical advisories.
 - [ ] Secure library configuration reviewed and documented.
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** package.json (pinned packageManager, engines, `audit` script, pnpm.overrides), .npmrc (engine-strict, save-exact), apps/api/package.json + packages/shared/package.json (exact current versions), .github/dependabot.yml, .github/workflows/security.yml (frozen-lockfile install + `pnpm audit --audit-level=high`). Remaining: run `pnpm install` once and commit pnpm-lock.yaml.

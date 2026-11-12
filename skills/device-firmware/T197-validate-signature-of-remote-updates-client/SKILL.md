@@ -41,8 +41,8 @@ export async function applyFirmware(device: SimDevice, manifest: SignedManifest,
 - Expo OTA (expo-updates): enable code signing (`updates.codeSigningCertificate`) or disable OTA.
 
 **Success Criteria:**
-- [ ] Tampered, unsigned, oversized or downgrade firmware is rejected by the simulator
-- [ ] Failed verification triggers rollback and an event entry
-- [ ] Expo OTA updates are code-signed or disabled
+- [x] Tampered, unsigned, oversized or downgrade firmware is rejected by the simulator
+- [x] Failed verification triggers rollback and an event entry
+- [ ] Expo OTA updates are code-signed or disabled (client config: apps/mobile/app.json, covered by Layer D / T279)
 
-**Status:** Pending
+**Status:** Applied

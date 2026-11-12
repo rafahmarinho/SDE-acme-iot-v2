@@ -39,8 +39,8 @@ create policy events_insert on events for insert with check (public.has_role(org
 - Add pgTAP or SQL tests asserting denial for each role.
 
 **Success Criteria:**
-- [ ] Every table: RLS enabled and policies per operation
-- [ ] Secret columns not selectable by `authenticated`
-- [ ] Privileged RPCs not executable by clients
+- [x] Every table: RLS enabled and policies per operation
+- [x] Secret columns not selectable by `authenticated`
+- [x] Privileged RPCs not executable by clients
 
-**Status:** Pending
+**Status:** Applied

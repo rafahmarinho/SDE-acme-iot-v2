@@ -42,8 +42,9 @@ const Filter = z.object({ type: z.enum(['thermostat', 'plug', 'temp_sensor', 'hu
 - Never build file paths, imports or SQL identifiers from input.
 
 **Success Criteria:**
-- [ ] No dynamic import/require/path built from request data
-- [ ] Sort/filter/scenario params validated against enums
-- [ ] Unknown values return 400
+- [x] No dynamic import/require/path built from request data
+- [x] Sort/filter/scenario params validated against enums
+- [x] Unknown values return 400
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** packages/shared/src/validation.ts (SCENARIOS, SORT_FIELDS, DEVICE_TYPES enums, `.strict()`), apps/api/src/lib/http.ts (`readQuery`/`readJson`, ZodError→400), apps/api/eslint.config.js (no dynamic import/require).

@@ -44,8 +44,8 @@ export default async function handler(req, res) {
 - Integrations: signed requests or OAuth client credentials, never anonymous.
 
 **Success Criteria:**
-- [ ] No API route accepts unauthenticated requests (except health check).
-- [ ] Device report endpoint rejects bad/missing signatures and stale timestamps.
-- [ ] Outgoing simulator calls are signed.
+- [x] No API route accepts unauthenticated requests (except health check).
+- [x] Device report endpoint rejects bad/missing signatures and stale timestamps.
+- [x] Outgoing simulator calls are signed.
 
-**Status:** Pending
+**Status:** Applied

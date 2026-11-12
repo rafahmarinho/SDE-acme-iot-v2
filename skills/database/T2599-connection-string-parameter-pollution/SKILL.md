@@ -41,8 +41,9 @@ export async function listRooms(orgId: string) {
 - Clients use only the fixed `EXPO_PUBLIC_SUPABASE_URL`.
 
 **Success Criteria:**
-- [ ] No code builds connection strings from request input.
-- [ ] Connections enforce TLS (`ssl: 'require'`).
+- [x] No code builds connection strings from request input.
+- [x] Connections enforce TLS (`ssl: 'require'`).
 - [ ] Tenant isolation verified via RLS tests, not separate connections.
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** apps/api/src/lib/env.ts + packages/shared/src/url.ts (SUPABASE_URL parsed, https-only, reduced to origin, no embedded credentials), apps/api/src/lib/supabase.ts (single fixed origin; tenant scoping via org_id + RLS). No raw Postgres DSN is used; Supabase REST/Realtime is HTTPS/WSS only.

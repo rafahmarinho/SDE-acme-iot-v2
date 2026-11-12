@@ -25,4 +25,10 @@ dedicated server modules, and configure firewall/QoS/security modules to resist 
 - Platform owner enables Vercel Firewall rules (rate limiting / bot protection) for `/api/*` and
   verifies Supabase network restrictions; application-level throttling remains in T1362.
 
+**Re-evaluation (apply-fixes):** checked apps/api/vercel.json, apps/api/src/lib/http.ts and the whole repo for a server/proxy config.
+NONE - no file in this repository can implement this fix: Vercel buffers the full request at its edge before invoking a
+function and owns socket/connection handling; Vercel Firewall/WAF rules and Supabase network restrictions are configured
+in their dashboards, not in vercel.json. Application-level mitigations (body/header limits, per-user/IP throttling) are
+already applied under T35, T536 and T1362.
+
 **Status:** Documented

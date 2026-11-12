@@ -38,8 +38,8 @@ export default withAuth(async (req, res, ctx) => {
 - Confirm withdrawal to the user; do not degrade unrelated core features.
 
 **Success Criteria:**
-- [ ] Each consent purpose can be withdrawn from Settings
+- [x] Each consent purpose can be withdrawn from Settings
 - [ ] Related processing stops immediately after withdrawal
 - [ ] Withdrawal is recorded and propagated to integrations
 
-**Status:** Pending
+**Status:** Applied

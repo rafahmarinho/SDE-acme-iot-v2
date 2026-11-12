@@ -47,9 +47,10 @@ const DEVICE_SIM_BASE = requireHttps(process.env.DEVICE_SIM_BASE_URL!, 'DEVICE_S
 - Supabase Realtime must use `wss://` (the SDK does this when the URL is `https://`).
 
 **Success Criteria:**
-- [ ] No `http://` URL in any production config or `.env.example` (except localhost dev).
-- [ ] API responses include `Strict-Transport-Security`.
-- [ ] Startup fails fast if a non-HTTPS URL is configured in production.
-- [ ] Simulated device calls are made only over HTTPS.
+- [x] No `http://` URL in any production config or `.env.example` (except localhost dev).
+- [x] API responses include `Strict-Transport-Security`.
+- [x] Startup fails fast if a non-HTTPS URL is configured in production.
+- [x] Simulated device calls are made only over HTTPS.
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** packages/shared/src/url.ts (`requireHttpsOrigin`), apps/api/src/lib/env.ts (all base URLs https), apps/api/src/middleware/securityHeaders.ts + apps/api/vercel.json (HSTS), apps/api/src/lib/http.ts (x-forwarded-proto=http → 400 in production).

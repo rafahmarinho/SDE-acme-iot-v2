@@ -46,8 +46,9 @@ return res.json({ items: data.map(toDeviceDto) });
 - Remove unused/debug endpoints before release (see T49).
 
 **Success Criteria:**
-- [ ] No `select('*')` in API or client code.
+- [x] No `select('*')` in API or client code.
 - [ ] Viewer role responses contain no admin-only fields (tested).
-- [ ] Error responses never include stack traces or SQL errors.
+- [x] Error responses never include stack traces or SQL errors.
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** packages/shared/src/dto.ts (COLUMNS allow-lists, `pick`/`toDto`), packages/shared/src/permissions.ts (`team.read_contact` owner/admin only), apps/api/src/lib/http.ts (generic error codes only), apps/api/eslint.config.js (select(*) banned).

@@ -36,7 +36,8 @@ export function json(res: VercelResponse, status: number, data: unknown) {
 - Sensitive JSON responses: `Cache-Control: no-store`.
 
 **Success Criteria:**
-- [ ] All JSON responses are objects with `application/json` + `nosniff`
-- [ ] No cookie-based auth on JSON endpoints
+- [x] All JSON responses are objects with `application/json` + `nosniff`
+- [x] No cookie-based auth on JSON endpoints
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** apps/api/src/lib/http.ts (`json()` refuses top-level arrays, sets JSON content type), apps/api/src/middleware/securityHeaders.ts (nosniff, no-store).

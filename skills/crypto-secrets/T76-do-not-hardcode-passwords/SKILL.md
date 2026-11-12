@@ -45,9 +45,10 @@ export const env = {
 - Demo accounts: generate random passwords at seed time or use password-reset onboarding.
 
 **Success Criteria:**
-- [ ] `git grep -iE "service_role|password\s*=|secret\s*="` finds no literal secrets.
+- [x] `git grep -iE "service_role|password\s*=|secret\s*="` finds no literal secrets.
 - [ ] Expo web/native bundle contains no service role key (inspect exported bundle).
 - [ ] Seed data contains no fixed shared passwords.
-- [ ] Secret scanning runs in CI.
+- [x] Secret scanning runs in CI.
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** apps/api/src/lib/env.ts (all secrets from env, placeholder values rejected), .env.example (placeholders only), .gitignore (.env*, *.pem, keystores), .github/workflows/security.yml (gitleaks). Seed passwords: Layer A.

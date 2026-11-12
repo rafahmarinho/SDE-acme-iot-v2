@@ -43,8 +43,8 @@ if (incoming.source === 'external') router.replace({ pathname: '/devices/[id]', 
 - If a native module ever exposes a component, enforce `android:permission` with signature protection level and check `Binder.getCallingUid()`.
 
 **Success Criteria:**
-- [ ] Merged AndroidManifest has no unintended exported components
-- [ ] No external intent triggers a privileged action without user confirmation
-- [ ] Only required permissions declared
+- [x] Merged AndroidManifest has no unintended exported components
+- [x] No external intent triggers a privileged action without user confirmation
+- [x] Only required permissions declared
 
-**Status:** Pending
+**Status:** Applied

@@ -40,8 +40,8 @@ const QrPayload = z.object({ v: z.literal(1), claimCode: z.string().regex(/^[A-Z
 - Do not export Android activities/receivers beyond the main launcher (see T5646).
 
 **Success Criteria:**
-- [ ] Unknown deep-link paths redirect to home
-- [ ] No deep link or QR can change device state without confirmation
-- [ ] QR payloads validated by a strict schema
+- [x] Unknown deep-link paths redirect to home
+- [x] No deep link or QR can change device state without confirmation
+- [x] QR payloads validated by a strict schema
 
-**Status:** Pending
+**Status:** Applied

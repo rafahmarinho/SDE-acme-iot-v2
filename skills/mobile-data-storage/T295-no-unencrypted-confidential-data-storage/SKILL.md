@@ -41,8 +41,8 @@ create policy "org members read attachments" on storage.objects for select
 - Never place confidential files in shared/temp locations; delete temp files after use.
 
 **Success Criteria:**
-- [ ] No confidential data written unencrypted to device files
+- [x] No confidential data written unencrypted to device files
 - [ ] All Supabase Storage buckets are private with org-scoped policies
 - [ ] File access uses short-lived signed URLs only
 
-**Status:** Pending
+**Status:** Applied

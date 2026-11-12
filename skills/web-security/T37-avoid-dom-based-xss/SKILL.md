@@ -38,8 +38,8 @@ const payload = QrSchema.safeParse(JSON.parse(raw));
 - Enforce CSP with `script-src 'self'` on the web deployment (T66).
 
 **Success Criteria:**
-- [ ] Redirect params restricted to internal routes
-- [ ] QR payload validated by schema before use
+- [x] Redirect params restricted to internal routes
+- [x] QR payload validated by schema before use
 - [ ] No unsafe DOM sinks in web code (lint passes)
 
-**Status:** Pending
+**Status:** Applied

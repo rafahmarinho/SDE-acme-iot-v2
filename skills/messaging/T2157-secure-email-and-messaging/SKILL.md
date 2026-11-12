@@ -41,8 +41,8 @@ export async function notifyMembers(orgId: string, roles: Role[], key: TemplateK
 - Strip CR/LF from any value used in headers.
 
 **Success Criteria:**
-- [ ] SPF/DKIM/DMARC pass for sent emails.
-- [ ] Notifications only reach verified org members.
-- [ ] Emails contain no tokens other than single-use auth links.
+- [ ] SPF/DKIM/DMARC pass for sent emails. (DNS records of the sending domain + Supabase custom SMTP: configured outside the repo)
+- [x] Notifications only reach verified org members.
+- [x] Emails contain no tokens other than single-use auth links.
 
-**Status:** Pending
+**Status:** Applied

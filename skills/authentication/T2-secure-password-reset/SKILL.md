@@ -46,9 +46,9 @@ export async function completeReset(newPassword: string) {
 - Log reset requests/completions to the `events` table (no tokens in logs).
 
 **Success Criteria:**
-- [ ] Response and timing are identical for existing and non-existing emails
+- [x] Response and timing are identical for existing and non-existing emails
 - [ ] Reset links expire and cannot be reused
 - [ ] Reset request endpoint is rate limited and CAPTCHA-protected
-- [ ] Other sessions are revoked after a successful reset
+- [x] Other sessions are revoked after a successful reset
 
-**Status:** Pending
+**Status:** Applied

@@ -2,10 +2,19 @@
   "name": "acme-iot-v2",
   "private": true,
   "packageManager": "pnpm@9.12.0",
+  "engines": {
+    "node": ">=20.11 <23",
+    "pnpm": ">=9.12.0 <10"
+  },
   "scripts": {
     "dev:mobile": "pnpm --filter @acme-iot/mobile start",
     "dev:api": "pnpm --filter @acme-iot/api dev",
     "typecheck": "pnpm -r typecheck",
-    "audit": "pnpm audit --prod"
+    "lint": "pnpm -r --if-present lint",
+    "audit": "pnpm audit --prod --audit-level=high",
+    "ci:install": "pnpm install --frozen-lockfile"
+  },
+  "pnpm": {
+    "overrides": {}
   }
 }

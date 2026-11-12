@@ -41,8 +41,8 @@ export const secureFetch = (url: string, init: RequestInit = {}) =>
 - Hostname verification must remain enabled (default in Node/undici).
 
 **Success Criteria:**
-- [ ] No code or config disables certificate validation.
-- [ ] Startup check fails if `NODE_TLS_REJECT_UNAUTHORIZED=0`.
-- [ ] Outbound calls use the shared `secureFetch` helper.
+- [x] No code or config disables certificate validation.
+- [x] Startup check fails if `NODE_TLS_REJECT_UNAUTHORIZED=0`.
+- [x] Outbound calls use the shared `secureFetch` helper. (implemented as `safeOutboundFetch` in apps/api/src/services/outbound.ts; private CA via NODE_EXTRA_CA_CERTS, never by disabling validation)
 
-**Status:** Pending
+**Status:** Applied

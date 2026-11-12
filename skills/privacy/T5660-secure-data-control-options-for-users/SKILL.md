@@ -45,8 +45,8 @@ await ctx.admin.auth.admin.deleteUser(ctx.userId); // cascades profiles/consents
 - Clear tokens, caches and secure-store items on device after deletion/logout.
 
 **Success Criteria:**
-- [ ] Users can export, clear local and delete their data from Settings
+- [x] Users can export, clear local and delete their data from Settings
 - [ ] Deletion requires re-auth and revokes all sessions
-- [ ] No personal data remains on device after deletion
+- [x] No personal data remains on device after deletion
 
-**Status:** Pending
+**Status:** Applied

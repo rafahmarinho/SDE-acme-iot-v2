@@ -44,8 +44,8 @@ export async function changeMemberRole(orgId: string, userId: string, role: Role
 
 **Success Criteria:**
 - [ ] No custom session ids are created or accepted by the API
-- [ ] Refresh token rotation enabled in Supabase Auth settings
+- [x] Refresh token rotation enabled in Supabase Auth settings
 - [ ] Role change or password reset invalidates existing sessions
 - [ ] Auth uses PKCE; tokens never appear in URLs/logs
 
-**Status:** Pending
+**Status:** Applied

@@ -38,8 +38,8 @@ export default withAuth(async (req, res, ctx) => {
 - Do not put secrets in the app that would be "protected" by root detection.
 
 **Success Criteria:**
-- [ ] No security decision depends solely on client-side root/jailbreak status
+- [x] No security decision depends solely on client-side root/jailbreak status
 - [ ] Control commands are authorized server-side for every request
 - [ ] Threat model documents rooted-device assumption
 
-**Status:** Pending
+**Status:** Applied

@@ -44,7 +44,7 @@ export async function unlockForSensitiveAction(reason: string) {
 - Declare `NSFaceIDUsageDescription` in app.json (ios.infoPlist).
 
 **Success Criteria:**
-- [ ] Biometric gate releases a Keychain item with access control (not a boolean check)
-- [ ] Passcode fallback works; feature can be disabled in settings
+- [x] Biometric gate releases a Keychain item with access control (not a boolean check)
+- [x] Passcode fallback works; feature can be disabled in settings
 
-**Status:** Pending
+**Status:** Applied

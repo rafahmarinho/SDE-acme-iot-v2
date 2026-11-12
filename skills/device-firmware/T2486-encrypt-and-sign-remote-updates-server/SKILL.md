@@ -41,8 +41,8 @@ export function buildRelease(blob: Buffer, model: string, version: string, devic
 - Keep the private key in Vercel env (or a KMS); plan key rotation with versioned public keys on devices.
 
 **Success Criteria:**
-- [ ] Every firmware release has a server-generated signature and hash
-- [ ] Private signing key never leaves server-side env
-- [ ] Devices receive updates only over TLS with signed URLs
+- [x] Every firmware release has a server-generated signature and hash
+- [x] Private signing key never leaves server-side env
+- [x] Devices receive updates only over TLS with signed URLs
 
-**Status:** Pending
+**Status:** Applied

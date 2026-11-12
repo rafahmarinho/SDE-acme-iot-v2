@@ -44,8 +44,9 @@ export function newDeviceCredential() {
 - Rotate secrets on schedule and on compromise; document rotation in README.
 
 **Success Criteria:**
-- [ ] All system secrets are ≥ 32 random bytes and validated at startup
+- [x] All system secrets are ≥ 32 random bytes and validated at startup
 - [ ] Each device/integration has its own credential; only hashes are persisted
-- [ ] No default or sample secret values work in any deployed environment
+- [x] No default or sample secret values work in any deployed environment
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** apps/api/src/lib/env.ts (≥32-byte secrets, placeholder values rejected, fail at cold start), apps/api/src/lib/crypto.ts (`newSystemCredential`: 256-bit secret + SHA-256 hash for persistence), apps/api/src/middleware/systemAuth.ts (HMAC-signed system requests with replay window). Persisting per-device hashes: Layer A/C.

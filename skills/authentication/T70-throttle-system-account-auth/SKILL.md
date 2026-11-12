@@ -45,7 +45,8 @@ export async function assertNotLocked(principalId: string) {
 
 **Success Criteria:**
 - [ ] 5+ failed system auths trigger backoff and an event/alert
-- [ ] Throttle state is shared across serverless instances
-- [ ] Successful auth resets the counter
+- [x] Throttle state is shared across serverless instances
+- [x] Successful auth resets the counter
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** apps/api/src/middleware/rateLimit.ts (`assertSystemAuthNotLocked`, `recordSystemAuthFailure`, `resetSystemAuthFailures` — per principal and per IP, Postgres-backed, 5 failures / 15 min lockout), apps/api/src/middleware/systemAuth.ts. Lockouts are logged (`system_auth_locked`); org alert row creation: Layer C.

@@ -43,8 +43,8 @@ export const evaluate = (r: z.infer<typeof Rule>, v: number) => OPS[r.condition.
 - ESLint: enable `no-eval`, `no-new-func`, `no-implied-eval`.
 
 **Success Criteria:**
-- [ ] No eval/new Function/remote module loading in the codebase (lint enforced)
-- [ ] Automation rules validated against schema before save and execution
-- [ ] OTA updates signed or disabled
+- [x] No eval/new Function/remote module loading in the codebase (lint enforced)
+- [x] Automation rules validated against schema before save and execution
+- [x] OTA updates signed or disabled
 
-**Status:** Pending
+**Status:** Applied

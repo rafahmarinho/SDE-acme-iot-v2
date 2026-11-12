@@ -40,8 +40,8 @@ AppState.addEventListener('change', (state) => {
 - Push payloads must not contain sensitive data; fetch details after authenticated app open.
 
 **Success Criteria:**
-- [ ] No exported services in merged manifest
-- [ ] Realtime subscriptions closed when app is backgrounded
+- [x] No exported services in merged manifest
+- [x] Realtime subscriptions closed when app is backgrounded
 - [ ] Push notification payloads contain no PII/secrets
 
-**Status:** Pending
+**Status:** Applied

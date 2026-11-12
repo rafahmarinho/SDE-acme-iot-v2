@@ -1,1 +1,0 @@
-{ "expo": { "name": "ACME IoT", "slug": "acme-iot", "scheme": "acmeiot", "platforms": ["ios", "android", "web"] } }

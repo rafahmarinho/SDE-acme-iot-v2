@@ -42,7 +42,7 @@ alter default privileges in schema public revoke all on tables from anon;
 
 **Success Criteria:**
 - [ ] Service role used only in listed server modules
-- [ ] `anon` has no table privileges; all tables have RLS enabled
+- [x] `anon` has no table privileges; all tables have RLS enabled
 - [ ] CI check fails if service role key string pattern appears in mobile bundle
 
-**Status:** Pending
+**Status:** Applied

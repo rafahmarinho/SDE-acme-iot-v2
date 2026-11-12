@@ -39,8 +39,9 @@ if (req.cookies?.session && req.headers['x-csrf-token'] !== req.cookies['csrf'])
 - Combine with strict CORS (T257).
 
 **Success Criteria:**
-- [ ] API ignores cookies for authentication
+- [x] API ignores cookies for authentication
 - [ ] No state change on GET
-- [ ] Cross-site form POST to any mutation route fails
+- [x] Cross-site form POST to any mutation route fails
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** apps/api/src/middleware/auth.ts (Bearer-only, cookie auth refused), apps/api/src/lib/http.ts (415 unless application/json; bodies rejected on GET/DELETE).

@@ -42,8 +42,8 @@ export function render(key: Key, vars: Record<string, string | number>): string 
 - Validate/trim variable values (length, charset).
 
 **Success Criteria:**
-- [ ] No user-supplied string is ever compiled as a template.
-- [ ] `{{7*7}}`-style payloads in device/automation names are rendered literally (test).
-- [ ] Email HTML output escapes variables.
+- [x] No user-supplied string is ever compiled as a template.
+- [ ] `{{7*7}}`-style payloads in device/automation names are rendered literally (test). (behaviour implemented by plain substitution in apps/api/src/lib/templates.ts; automated test not yet written)
+- [x] Email HTML output escapes variables.
 
-**Status:** Pending
+**Status:** Applied

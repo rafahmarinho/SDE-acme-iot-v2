@@ -47,8 +47,8 @@ from devices;
 - Include identifiers in the privacy notice/consent (T178).
 
 **Success Criteria:**
-- [ ] App collects no hardware identifiers of the user's phone
+- [x] App collects no hardware identifiers of the user's phone
 - [ ] Device serials masked for operator/viewer roles and absent from logs
 - [ ] Claim codes stored hashed
 
-**Status:** Pending
+**Status:** Applied

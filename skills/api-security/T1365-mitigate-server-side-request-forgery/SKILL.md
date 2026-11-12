@@ -43,8 +43,8 @@ export async function safeOutboundFetch(target: string, init: RequestInit = {}) 
 - Validate response shape (zod) before using/returning it.
 
 **Success Criteria:**
-- [ ] No `fetch()` of user-controlled URLs anywhere in `apps/api`.
-- [ ] All outbound calls go through `safeOutboundFetch`.
-- [ ] Integrations use catalog identifiers, not URLs.
+- [x] No `fetch()` of user-controlled URLs anywhere in `apps/api`.
+- [x] All outbound calls go through `safeOutboundFetch`.
+- [x] Integrations use catalog identifiers, not URLs.
 
-**Status:** Pending
+**Status:** Applied

@@ -43,8 +43,8 @@ export async function sealJSON(value: unknown): Promise<string> {
 - Note: XSS defeats browser encryption — pair with CSP/XSS controls (T36, T37).
 
 **Success Criteria:**
-- [ ] No sensitive plaintext in localStorage/sessionStorage/IndexedDB after login
-- [ ] Browser cache limited to session + minimal readings
-- [ ] Encryption key and data wiped on logout
+- [x] No sensitive plaintext in localStorage/sessionStorage/IndexedDB after login
+- [x] Browser cache limited to session + minimal readings
+- [x] Encryption key and data wiped on logout
 
-**Status:** Pending
+**Status:** Applied

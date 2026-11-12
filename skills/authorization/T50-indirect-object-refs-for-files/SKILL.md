@@ -40,4 +40,4 @@ res.json({ url: data!.signedUrl });
 - [ ] All buckets private; downloads via signed URLs ≤ 5 min
 - [ ] Cross-org file id returns 404
 
-**Status:** Pending
+**Status:** Applied

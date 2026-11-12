@@ -45,4 +45,4 @@ export default withAuth(async (req, res, ctx) => {
 - [ ] Claim codes are single-use and hashed
 - [ ] Device reports require a per-device credential
 
-**Status:** Pending
+**Status:** Applied

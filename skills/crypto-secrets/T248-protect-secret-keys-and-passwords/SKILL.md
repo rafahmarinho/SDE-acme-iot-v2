@@ -43,9 +43,10 @@ export const supabaseAdmin = createClient(env.supabaseUrl, env.serviceRoleKey, {
 - Never log env values; redact `Authorization` headers in logs.
 
 **Success Criteria:**
-- [ ] Service role key referenced only under `apps/api/src/lib`.
+- [x] Service role key referenced only under `apps/api/src/lib`.
 - [ ] ESLint boundary prevents importing server modules into `apps/mobile`.
 - [ ] Rotation procedure documented.
-- [ ] Logs contain no secrets.
+- [x] Logs contain no secrets.
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** apps/api/src/lib/supabase.ts (service-role client server-only, throws if bundled in a client), apps/api/src/lib/env.ts (values never logged), apps/api/src/lib/audit.ts (`redact`/`log`). Mobile ESLint boundary: Layer D.

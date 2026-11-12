@@ -38,8 +38,8 @@ supabase.auth.onAuthStateChange((event) => {
 - On web, combine with `Clear-Site-Data` (T1539).
 
 **Success Criteria:**
-- [ ] After logout no token, cached readings or org data remain in storage
-- [ ] 401/refresh failure triggers the same cleanup
-- [ ] Realtime subscriptions closed on logout
+- [x] After logout no token, cached readings or org data remain in storage
+- [x] 401/refresh failure triggers the same cleanup
+- [x] Realtime subscriptions closed on logout
 
-**Status:** Pending
+**Status:** Applied

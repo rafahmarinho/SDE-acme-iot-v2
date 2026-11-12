@@ -43,8 +43,9 @@ export function cors(req: VercelRequest, res: VercelResponse): boolean {
 - Configure Supabase Auth "Site URL"/redirect allow-list consistently.
 
 **Success Criteria:**
-- [ ] Unknown origins receive no ACAO header
-- [ ] No `*` or reflected origin
-- [ ] All non-OPTIONS requests authenticated regardless of origin
+- [x] Unknown origins receive no ACAO header
+- [x] No `*` or reflected origin
+- [x] All non-OPTIONS requests authenticated regardless of origin
 
-**Status:** Pending
+**Status:** Applied
+**Applied in:** apps/api/src/middleware/cors.ts (exact allow-list, no credentials), apps/api/src/lib/env.ts (ALLOWED_ORIGINS validated: https, no wildcards).

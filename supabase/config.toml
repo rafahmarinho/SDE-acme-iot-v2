@@ -1,0 +1,95 @@
+# ACME IoT v2 -- Supabase CLI configuration (local stack; mirror these settings in the hosted project)
+# Countermeasures: T20 (session issuance/rotation), T2600 (max_rows), T214 (private buckets)
+# Contract: docs/security-contract.md section 1 "Auth config"
+
+project_id = "acme-iot-v2"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+# Hard cap on rows returned by any PostgREST request (T2600 safety net; endpoints page at <= 100)
+max_rows = 1000
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 15
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+
+[realtime]
+enabled = true
+
+[studio]
+enabled = true
+port = 54323
+
+[inbucket]
+enabled = true
+port = 54324
+
+[storage]
+enabled = true
+file_size_limit = "32MiB"
+
+[storage.buckets.firmware]
+public = false
+file_size_limit = "32MiB"
+allowed_mime_types = ["application/octet-stream"]
+
+[storage.buckets.avatars]
+public = false
+file_size_limit = "2MiB"
+allowed_mime_types = ["image/png", "image/jpeg"]
+
+[auth]
+enabled = true
+site_url = "http://localhost:8081"
+# Exact redirect allow-list for email links (PKCE). No wildcards.
+additional_redirect_urls = ["acmeiot://auth/callback", "http://localhost:8081/auth/callback"]
+# Short-lived access tokens; roles are re-read from public.memberships on every request (T20)
+jwt_expiry = 3600
+# Refresh-token rotation with reuse detection: a replayed refresh token revokes the session family
+enable_refresh_token_rotation = true
+refresh_token_reuse_interval = 10
+enable_signup = true
+enable_anonymous_sign_ins = false
+enable_manual_linking = false
+# Password policy (T143 / T2): >= 12 chars, letters and digits
+minimum_password_length = 12
+password_requirements = "letters_digits"
+
+[auth.rate_limit]
+email_sent = 2
+sms_sent = 0
+anonymous_users = 0
+token_refresh = 150
+sign_in_sign_ups = 30
+token_verifications = 30
+
+[auth.email]
+enable_signup = true
+enable_confirmations = true
+double_confirm_changes = true
+# Changing a password requires a recent login / reauthentication (T2)
+secure_password_change = true
+max_frequency = "60s"
+otp_length = 8
+otp_expiry = 900
+
+[auth.sms]
+enable_signup = false
+
+[auth.external.apple]
+enabled = false
+
+[auth.external.google]
+enabled = false
+
+[analytics]
+enabled = true
+backend = "postgres"

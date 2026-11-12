@@ -40,8 +40,8 @@ await SecureStore.setItemAsync('sb-session', sessionJson, iosSecureOptions);
 - Hide sensitive screens in the app switcher snapshot if they show PII (team, profile).
 
 **Success Criteria:**
-- [ ] Session stored in Keychain with device-only accessibility
-- [ ] Data Protection entitlement set for the iOS build
-- [ ] No sensitive values in AsyncStorage or console logs on iOS
+- [x] Session stored in Keychain with device-only accessibility
+- [x] Data Protection entitlement set for the iOS build
+- [x] No sensitive values in AsyncStorage or console logs on iOS
 
-**Status:** Pending
+**Status:** Applied
